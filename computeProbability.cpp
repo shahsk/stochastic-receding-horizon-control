@@ -217,8 +217,8 @@ double randn_trig(Matrix& randarray, long seed)
 	double rand_1, rand_2;
 
 	double mu=0.0, sigma=1.0;	
-	static bool deviateAvailable=false;	//	flag
-	static float storedDeviate;			//	deviate from previous calculation
+	static bool deviateAvailable=false;	
+	static float storedDeviate;	
 	double dist, angle;
 	int i,j,k;
 	
@@ -235,13 +235,10 @@ for (i=0;i<STEP;i++){
 		dist=sqrt( -2.0 * log(rand_1));
 		angle=2.0 * PI * (rand_2);
 		
-		//	calculate and store first deviate and set flag
 		storedDeviate=dist*cos(angle);
 		deviateAvailable=true;
 		
-		//	calcaulate return second deviate
 		(randarray[i][k]) = dist * sin(angle) * sigma + mu;
-		//printf("%f",*randarray);
 	}
 		else {
 		deviateAvailable=false;
