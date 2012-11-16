@@ -1,0 +1,11 @@
+The presented code is for computing stochastic optimal controllers as described in the publication
+"" for an Omni-directional robot.
+
+To compile the code
+
+$g++ -fopenmp -o EXE_FILE_NAME main.cpp computeProbability.cpp
+
+To disable the code from using parallel remove "-fopenmp".
+
+The code will store value of function g(q) and stores it in a text file.
+Please use the MATLAB code to visualize the data and use it with further processing.
