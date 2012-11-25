@@ -2,6 +2,8 @@ The presented code is for computing stochastic optimal controllers as described 
 Shridhar Shah, Herbert Tanner, Chetan Pahlajani"Stochastic receding horizon control of nonlinear stochastic systems
 with probabilistic state constraints", Transactions of Automatic Control (In Review) for an Omni-directional robot.
 
+Please go through the paper at http://arxiv.org/abs/1211.4038 to understand the code.
+
 To compile the code
 
 $g++ -fopenmp -o EXE_FILE_NAME main.cpp computeProbability.cpp
@@ -10,3 +12,10 @@ To disable the code from using all processor cores remove "-fopenmp".
 
 The code will store value of function g(q) and stores it in a text file.
 Please use the MATLAB code to visualize the data and use it with further processing.
+
+The stochastic controller computed in above code was implemented using Robot Operating System (ROS). The implementation is specific
+to the driver and design of the robot used and will require modifications for each implementation. To see details of the robot design and details on the  driver please visit project page
+https://code.google.com/p/my-ros-arduino-robot/
+
+
+
